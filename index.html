@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>p[A]NTONYckage📦</title>
+    </head>
+
+    <body>
+        <!-- Encabezado para ir al primer formulario -->
+        <header>
+            <a href="#formulario-1" id="a-formulario" onclick="mostrarPrimero()"
+                >Realizar envío</a
+            >
+        </header>
+
+        <!-- Cuerpo de la Home page -->
+        <div id="contenedor">
+            <div id="texto">
+                <h2>Realiza envíos de forma rápida y segura.</h2>
+                <p>Haz que esos paquetes lleguen... ¡y lleguen bien!</p>
+            </div>
+        </div>
+
+        <div class="contenedor-forms">
+            <!-- Formulario de datos básicos (oculto en primera instancia) -->
+            <div
+                class="contenedor-form oculto"
+                id="cont-formulario-1"
+            >
+                <h3>Datos básicos de envío</h3>
+                <form>
+                    <div id="formulario-1">
+                        <div id="dimensiones" class="seccion">
+                            <h4>Dimensiones del paquete</h4>
+                            <div class="entrada">
+                                <label for="ancho">Ancho (cm)</label>
+                                <input type="number" id="ancho" />
+                            </div>
+                            <div class="entrada">
+                                <label for="alto">Alto (cm)</label>
+                                <input type="number" id="alto" />
+                            </div>
+                            <div class="entrada">
+                                <label for="largo">Largo (cm)</label>
+                                <input type="number" id="largo" />
+                            </div>
+                        </div>
+                        <div id="contenedor-peso" class="seccion">
+                            <h4>Peso del paquete</h4>
+                            <div class="entrada">
+                                <label for="peso">Peso (kg)</label>
+                                <input type="number" id="peso" />
+                            </div>
+                        </div>
+                        <div id="postal" class="seccion">
+                            <h4>Códigos postales</h4>
+                            <div class="entrada">
+                                <label for="postal-origen">CP del origen</label>
+                                <input type="number" id="postal-origen" />
+                            </div>
+                            <div class="entrada">
+                                <label for="postal-destino"
+                                    >CP del destino</label
+                                >
+                                <input type="number" id="postal-destino" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="confirmar">
+                        <button
+                            class="btn btn-primary"
+                            type="button"
+                            onclick="mostrarEmpresas()"
+                        >
+                            Confirmar
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Formulario de empresas de paquetería (oculto, igualmente) -->
+            <div
+                class="contenedor-form oculto"
+                id="cont-formulario-2"
+            >
+                <h3>Opciones de envío</h3>
+                <form>
+                    <div id="formulario-2">
+                        <div class="contenedor-opciones">
+                            <div class="opcion">
+                                <img
+                                    class="w-100"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Logo_de_Estafeta.svg"
+                                    alt=""
+                                />
+                                <button
+                                    type="button"
+                                    class="btn btn-primary btn-opcion"
+                                    onclick="mostrarFormDatosPersonales()"
+                                >
+                                    Seleccionar
+                                </button>
+                            </div>
+                            <div class="opcion">
+                                <img
+                                    class="w-100"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/DHL_Logo.svg/1280px-DHL_Logo.svg.png"
+                                    alt=""
+                                />
+                                <button
+                                    type="button"
+                                    class="btn btn-primary btn-opcion"
+                                    onclick="mostrarFormDatosPersonales()"
+                                >
+                                    Seleccionar
+                                </button>
+                            </div>
+                            <div class="opcion">
+                                <img
+                                    class="w-100"
+                                    src="https://www.redpack.com.mx/wp-content/uploads/2021/06/logored-uai-2064x306.png"
+                                    alt=""
+                                />
+                                <button
+                                    type="button"
+                                    class="btn btn-primary btn-opcion"
+                                    onclick="mostrarFormDatosPersonales()"
+                                >
+                                    Seleccionar
+                                </button>
+                            </div>
+                            <div class="opcion">
+                                <img
+                                    class="w-100"
+                                    src="https://nwafoundation.org/wp-content/uploads/2017/04/FedEx-Logo-PNG-Transparent.png"
+                                    alt=""
+                                />
+                                <button
+                                    type="button"
+                                    class="btn btn-primary btn-opcion"
+                                    onclick="mostrarFormDatosPersonales()"
+                                >
+                                    Seleccionar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Formulario final de datos personales -->
+            <div
+                class="contenedor-form oculto"
+                id="cont-formulario-3"
+            >
+                <h3>Datos personales</h3>
+                <form id="form-personal">
+                    <div class="row mb-3">
+                        <label for="nombre-remitente" class="form-label">Nombre del Remitente</label>
+                        <input type="text" class="form-control w-100" id="nombre-remitente" placeholder="Ingresa el nombre del remitente" />
+                    </div>
+                    <div class="row mb-3">
+                        <label for="nombre-destinatario" class="form-label">Nombre del Destinatario</label>
+                        <input type="text" class="form-control w-100" id="nombre-destinatario" placeholder="Ingresa el nombre del destinatario" />
+                    </div>
+                    <div class="row mb-3">
+                        <label for="direccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control w-100" id="direccion" placeholder="Ingresa la dirección completa" />
+                    </div>
+                    <div class="row mb-3">
+                        <label for="telefono" class="form-label">Número de Teléfono</label>
+                        <input type="tel" class="form-control w-100" id="telefono" placeholder="Ingresa el número de teléfono" />
+                    </div>
+                    <div class="row mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control w-100" id="email" placeholder="Ingresa el correo electrónico" />
+                    </div>
+                    <button type="button" 
+                        class="btn btn-primary w-100" 
+                        id="btn-confirmar"
+                        onclick="enviar()">Confirmar Envío</button>
+                </form>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

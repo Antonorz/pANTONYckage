@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Parkinsans", sans-serif;
+}
+
+header {
+    width:100%;
+    background-color: #3999ff;
+    font-weight: 600;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    position: fixed;
+    text-align: center;
+    top:0;
+}
+
+#a-formulario {
+    color: black;
+}
+
+header li {
+    list-style: none;
+    text-align: center;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+#contenedor {
+    background-image: url(assets/imagen_camioneta.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#texto {
+    text-align: center;
+}
+
+.oculto {
+    display: none;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 7.5vh;
+}
+
+form {
+    justify-items: center;
+}
+
+#formulario-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    margin: 0 auto;
+    margin-top: 5vh;
+}
+
+.seccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw;
+    border: 2px solid #ddd;
+    width: 25vw;
+    height: 40vh;
+    box-sizing: border-box;
+}
+
+.entrada {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    width: 15vw;
+    box-sizing: border-box;
+}
+
+.confirmar {
+    margin-top: 5vh;
+}
+
+.contenedor-form {
+    padding: 2rem;
+}
+
+.contenedor-opciones {
+    padding: 0 6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.opcion {
+    background-color: #d7d3d3;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 6px;
+}
+
+.btn-opcion {
+    margin-top: 1rem;
+}
